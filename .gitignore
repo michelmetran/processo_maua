@@ -1,6 +1,10 @@
+# IDE
 .idea/
 .vscode/
+
+# Dados
 logs/
+adds/
 test/meus_processos.ipynb
 
 

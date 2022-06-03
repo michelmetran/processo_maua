@@ -3,40 +3,20 @@
 
 import os
 import time
+from traquitanas import net
 from bs4 import BeautifulSoup
+from dotenv import dotenv_values, find_dotenv
 
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def create_driver():
-    # Driver Firefox com Profile
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference('intl.accept_languages', 'pt-BR, pt')
-    profile.update_preferences()
-
-    # Driver Firefox com Options
-    options = Options()
-    options.headless = True
-
-    # Driver
-    log_path = os.path.join('..', 'logs')
-    os.makedirs(log_path, exist_ok=True)
-    driver = webdriver.Firefox(
-        firefox_profile=profile,
-        options=options,
-        service_log_path=os.path.join(log_path, 'geckodriver.log')
-    )
-    return driver
-
-
 def get_status(processo, ano, cpf):
+
+    driver = net.scraping.create_driver(download_path=os.getcwd())
     # Get URL
-    driver = create_driver()
     url = 'http://www.maua.sp.gov.br/eGoverno/Processo.aspx'
     driver.get(url)
     time.sleep(5)
@@ -64,7 +44,7 @@ def get_status(processo, ano, cpf):
 
     # Clica para Pesquisar
     btn_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
-        (By.XPATH, "//*[@id='form:j_id_3p:0:j_id_3t']")))
+        (By.XPATH, '//*[@id="form:j_id_3u:0:j_id_3y"]')))
     btn_field.click()
     time.sleep(5)
 
@@ -80,11 +60,8 @@ def get_status(processo, ano, cpf):
         print(i.strip())
 
     # Close Driver
-    driver.close()
+    driver.quit()
     
     # Print
     print('-'*50)
-
-
-
 
