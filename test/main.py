@@ -16,4 +16,4 @@ CPF_MICHEL = config['CPF_MICHEL']
 
 # Processos Ambientais
 maua.get_status('6333', 2019, CPF_ALBERTO)  # Rancho Ypê
-#maua.get_status('6334', 2019, CPF_ALBERTO)  # Rancho Sacy
+maua.get_status('6334', 2019, CPF_ALBERTO)  # Rancho Sacy

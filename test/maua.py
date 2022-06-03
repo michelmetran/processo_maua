@@ -14,12 +14,18 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 def get_status(processo, ano, cpf):
+    # Driver
+    driver = net.scraping.create_driver(
+        download_path=os.getcwd(),
+        headless=True,
+        adds_path=os.path.join('..', 'scrapy', 'adds'),
+        log_path=os.path.join('..', 'scrapy', 'logs'),
+    )
 
-    driver = net.scraping.create_driver(download_path=os.getcwd())
     # Get URL
-    url = 'http://www.maua.sp.gov.br/eGoverno/Processo.aspx'
-    driver.get(url)
-    time.sleep(5)
+    # url = 'http://www.maua.sp.gov.br/eGoverno/Processo.aspx'
+    # driver.get(url)
+    # time.sleep(5)
     url = 'https://e-gov.maua.sp.gov.br/grp/acessoexterno/programaAcessoExterno.faces?codigo=70043'
     driver.get(url)
     time.sleep(5)
@@ -28,25 +34,25 @@ def get_status(processo, ano, cpf):
     ex_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
         (By.XPATH, "//*[@id='form:exercicio:field']")))
     ex_field.send_keys(ano)
-    time.sleep(1)
+    #time.sleep(1)
 
     # Insere Numero
     n_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
         (By.XPATH, "//*[@id='form:numero:field']")))
     n_field.send_keys(processo)
-    time.sleep(1)
+    #time.sleep(1)
 
     # Insere CPF
     cpf_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
         (By.XPATH, "//*[@id='form:nome:field']")))
     cpf_field.send_keys(cpf)
-    time.sleep(1)
+    #time.sleep(0.1)
 
     # Clica para Pesquisar
     btn_field = WebDriverWait(driver, 5).until(EC.presence_of_element_located(
         (By.XPATH, '//*[@id="form:j_id_3u:0:j_id_3y"]')))
     btn_field.click()
-    time.sleep(5)
+    time.sleep(3)
 
     # Get HTML
     soup = BeautifulSoup(driver.page_source, features='html.parser')

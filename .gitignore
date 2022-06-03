@@ -5,8 +5,8 @@
 # Dados
 logs/
 adds/
+scrapy/
 test/meus_processos.ipynb
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
