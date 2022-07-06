@@ -17,7 +17,7 @@ Uma vez instalado o pacote/módulo, basta inserir os dados do processo que se de
 ```python
 from maua import get_status
 
-get_status(
+get_status(    
     processo='456',
     ano=2021,
     cpf='417.892.372-20'

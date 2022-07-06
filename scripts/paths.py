@@ -17,10 +17,6 @@ log_path.mkdir(exist_ok=True)
 adds_path = scrapy_path / 'adds'
 adds_path.mkdir(exist_ok=True)
 
-data_path = project_path / 'data'
-data_path.mkdir(exist_ok=True)
-
-
 if __name__ == '__main__':
     print(f'A pasta do projeto é: {project_path}')
     print(f'A pasta do scrapy é:  {scrapy_path}')
