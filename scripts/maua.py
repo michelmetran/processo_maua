@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
+"""
+dddd
+"""
 
 import time
 from bs4 import BeautifulSoup
