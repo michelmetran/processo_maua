@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
+"""
+Pastas do Projeto
+"""
 
 from pathlib import Path
 
@@ -11,15 +12,11 @@ scrapy_path.mkdir(exist_ok=True)
 driver_path = scrapy_path / 'driver'
 driver_path.mkdir(exist_ok=True)
 
-log_path = scrapy_path / 'logs'
-log_path.mkdir(exist_ok=True)
+logs_path = scrapy_path / 'logs'
+logs_path.mkdir(exist_ok=True)
 
 adds_path = scrapy_path / 'adds'
 adds_path.mkdir(exist_ok=True)
 
 if __name__ == '__main__':
-    print(f'A pasta do projeto é: {project_path}')
-    print(f'A pasta do scrapy é:  {scrapy_path}')
-    print(f'A pasta do driver é:  {driver_path}')
-    print(f'A pasta do log é:     {log_path}')
-    print(f'A pasta do adds é:    {adds_path}')
+    print(project_path)
