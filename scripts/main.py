@@ -2,8 +2,8 @@
 dddd
 """
 
-from maua import Driver
 from dotenv import dotenv_values, find_dotenv
+from maua import Driver
 from paths import driver_path, logs_path
 
 # Credentials
@@ -24,8 +24,8 @@ driver = Driver(
 # driver.get_status('661', 2021, CPF_MICHEL)
 
 # Processos Ambientais
-# driver.get_status('6333', 2019, CPF_ALBERTO)  # Rancho Ypê
-driver.get_status('6334', 2019, CPF_ALBERTO)  # Rancho Sacy
+driver.get_status('6333', 2019, CPF_ALBERTO)  # Rancho Ypê
+#driver.get_status('6334', 2019, CPF_ALBERTO)  # Rancho Sacy
 
 if __name__ == '__main__':
     print('Fim!')
