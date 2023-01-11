@@ -5,8 +5,6 @@ dddd
 import time
 
 from bs4 import BeautifulSoup
-from dotenv import dotenv_values, find_dotenv
-from paths import driver_path, logs_path
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -14,6 +12,10 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from traquitanas.scrapping import gecko
+
+#from dotenv import dotenv_values, find_dotenv
+#from paths import driver_path, logs_path
+
 
 
 class Driver(webdriver.Firefox):
@@ -49,7 +51,7 @@ class Driver(webdriver.Firefox):
 
         # Options
         my_options = FirefoxOptions()
-        my_options.headless = False
+        my_options.headless = True
         my_options.set_preference('intl.accept_languages', 'pt-BR, pt')
 
         # Driver
