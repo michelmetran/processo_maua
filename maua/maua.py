@@ -1,5 +1,5 @@
 """
-dddd
+Meu Driver
 """
 
 import time
@@ -10,8 +10,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from traquitanas.scrapping import gecko
+from selenium.webdriver.support.wait import WebDriverWait
+from traquitanas.scrapping import adds, gecko
 
 #from dotenv import dotenv_values, find_dotenv
 #from paths import driver_path, logs_path

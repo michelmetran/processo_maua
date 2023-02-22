@@ -25,8 +25,8 @@ driver = Driver(
 # driver.get_status(processo='661', ano=2021, cpf=CPF_ADMIN)
 
 # Compensação
-driver.get_status(processo='6333', ano=2019, cpf=CPF_AMBIENTE)  # Ypê
-# driver.get_status(processo='6334', ano=2019, cpf=CPF_AMBIENTE)  # Sacy
+#driver.get_status(processo='6333', ano=2019, cpf=CPF_AMBIENTE)  # Ypê
+driver.get_status(processo='6334', ano=2019, cpf=CPF_AMBIENTE)  # Sacy
 
 if __name__ == '__main__':
     print('Fim!')
