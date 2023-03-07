@@ -4,7 +4,7 @@
 
 Pense naquele processo administrativo, que é necessário acompanhar periodicamente!? Passei por isso com a [Consulta de Processos Administrativos](http://www.maua.sp.gov.br/eGoverno/Processo.aspx) da Prefeitura de Mauá e resolvi dinamizar a pesquisa processual.
 
-No *site* da Prefeitura é necessário inserir o número e ano do processo, bem como o CPF do interessado, conforme imagem abaixo.
+No _site_ da Prefeitura é necessário inserir o número e ano do processo, bem como o CPF do interessado, conforme imagem abaixo.
 
 ![sitemaua](https://i.imgur.com/VKTJkma.png)
 
