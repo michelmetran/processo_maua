@@ -28,4 +28,4 @@ get_status(
 
 <br>
 
-É possível associar essa rotina a uma tecla de atalho e pronto! Rapidamente torna-se possível consultar o _status_ do processo.
+É possível associar essa rotina a uma tecla de atalho e pronto: rapidamente torna-se possível consultar o _status_ do processo.
